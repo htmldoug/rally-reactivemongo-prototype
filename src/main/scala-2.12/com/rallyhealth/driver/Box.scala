@@ -1,4 +1,4 @@
-package com.rallyhealth.reactive
+package com.rallyhealth.driver
 
 import org.joda.time.DateTime
 import org.joda.time.format.ISODateTimeFormat
@@ -62,11 +62,11 @@ object Box {
     def write(jdtime: DateTime) = BSONDateTime(jdtime.getMillis)
   }
 
-  implicit val boxHandler = Macros.handlerOpts[Box, AutomaticMaterialization]
+//  implicit val boxHandler = Macros.handlerOpts[Box, AutomaticMaterialization]
   implicit val corrugatedBoxHandler = Macros.handler[CorrugatedBox]
-  implicit val rigidBoxHandler = Macros.handler[RigidBox]
-  implicit val foldingBoxHandler = Macros.handler[FoldingBox]
-  implicit val boxOfBoxes = Macros.handler[BoxOfBoxes]
+//  implicit val rigidBoxHandler = Macros.handler[RigidBox]
+//  implicit val foldingBoxHandler = Macros.handler[FoldingBox]
+//  implicit val boxOfBoxes = Macros.handler[BoxOfBoxes]
 
 }
 

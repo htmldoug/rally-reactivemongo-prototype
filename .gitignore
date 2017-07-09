@@ -107,3 +107,5 @@ web/rally/app/json/languages
 
 #rally config
 web/rally/app/scripts/app/config.js
+
+*.jfr
