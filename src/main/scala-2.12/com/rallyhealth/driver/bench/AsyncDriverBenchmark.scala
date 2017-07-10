@@ -41,7 +41,7 @@ class AsyncDriverBenchmark {
   def saveThenRead(state: BenchmarkState): immutable.IndexedSeq[Option[CorrugatedBox]] = {
     import state._
 
-    val futures = for (i <- 1 to 1000) yield {
+    val futures = for (i <- 1 to 250) yield {
       val id = BSONObjectID.generate().stringify
 
       val inputBox = CorrugatedBox(id, length = 1, width = 1, height = 1, manufactureDate = DateTime.now, lastShipped = None, layers = 4)
