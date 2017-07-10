@@ -30,9 +30,9 @@ import scala.concurrent.duration._
   *
   * @see https://github.com/ktoso/sbt-jmh
   */
-class DriverBenchmark {
+class SyncDriverBenchmark {
 
-  import DriverBenchmark._
+  import SyncDriverBenchmark._
 
   @Benchmark
   @BenchmarkMode(Array(Mode.Throughput))
@@ -51,7 +51,7 @@ class DriverBenchmark {
   }
 }
 
-object DriverBenchmark {
+object SyncDriverBenchmark {
 
   /**
     * Sometimes you way want to initialize some variables that your benchmark code needs,
